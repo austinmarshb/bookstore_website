@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Calibri, serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 4em;
+            text-align: center;
+        }
+
+        header,
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .headertitle {
+            font-size: 3rem;
+            font-weight: bold;
+            background-color: #5C2E5C;
+            color: white;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            font-size: 1.75em;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu-icon img {
+            display: none;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .hero img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 50px 0;
+        }
+
+        .product-card {
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            margin: 10px 0;
+        }
+
+        .product-card button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cartButton {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .see-more {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .see-more button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .newsletter {
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #3E5641;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 300px;
+            max-width: 80%;
+            margin-bottom: 10px;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #742C36;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* MODAL BELOW */
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* MODAL ABOVE  */
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .menu-icon img {
+                display: block;
+            }
+
+            /* .nav-links {
+                display: none;
+            } */
+            nav a {
+                margin: 10px 0;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-card {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .product-card img {
+                max-width: 100px;
+            }
+
+            .hero img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="headertitle">Book Haven Books</div>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="news.html">News</a>
+                </div>
+            </nav>
+        </div>
+        <h1>Gallery</h1>
+    </header>
+    <section class="hero">
+    <section class="products">
+        <div class="product-card">
+            <img src="Client3_Magazine1.png" alt="Product Image">
+            <h3>Newest Edition of BALL.</h3>
+            <p>Popular Sports magazine.</p>
+            <button class="add-to-cart" data-product="Newest Edition of BALL.">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="Client3_Magazine2.png" alt="Product Image">
+            <h3>Newest Edition of TRAVEL.</h3>
+            <p>Popular Travel magazine.</p>
+            <button class="add-to-cart" data-product="Newest Edition of TRAVEL.">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="Client3_Magazine3.png" alt="Product Image">
+            <h3>Newest Edition of EAT.</h3>
+            <p>Popular Food magazine.</p>
+            <button class="add-to-cart" data-product="Newest Edition of EAT.">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="Client3_Notebook.png" alt="Product Image">
+            <h3>Our Brand Notebook</h3>
+            <p>High quality leather bound notebook</p>
+            <button class="add-to-cart" data-product="Our Brand Notebook">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="Client3_Stickers.png" alt="Product Image">
+            <h3>Fun Stickers</h3>
+            <p>Put them anywhere!</p>
+            <button class="add-to-cart" data-product="Fun Stickers">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="Client3_Book1.png" alt="Product Image">
+            <h3>Brie Mine 4 Ever</h3>
+            <p>A book about Cheese...</p>
+            <button class="add-to-cart" data-product="Brie Mine 4 Ever">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="Client3_Book2.png" alt="Product Image">
+            <h3>Glory Riders</h3>
+            <p>New Non-Fiction Book</p>
+            <button class="add-to-cart" data-product="Glory Riders">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="Client3_Book3.png" alt="Product Image">
+            <h3>Sorcerer's Shadowed Chronicles</h3>
+            <p>New Fiction Book</p>
+            <button class="add-to-cart" data-product="Sorcerer's Shadowed Chronicles">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="Client3_ToteBag.png" alt="Product Image">
+            <h3>Tote Bag</h3>
+            <p>A bag for all your loyal purchases</p>
+            <button class="add-to-cart" data-product="Tote Bag">Add to Cart</button>
+        </div>
+    </section>
+
+    <div class="container">
+        <img src="shoppingcart.png" alt="Cart Icon"><br><br>
+        <button class="cartButton" id="viewCart">View Cart</button><br><br>
+        <button class="cartButton" id="clearCart">Clear Cart</button><br><br>
+        <button class="cartButton" id="submitCart">Submit Order</button>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="cartItems">Your cart is empty.</p>
+            <button class="cartButton" id="clearCart1">Clear Cart</button><br><br>
+            <button class="cartButton" id="submitCart1">Submit Order</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="newsletter">
+                <h3>Sign up for our Newsletter</h3>
+                <form onsubmit="alert('Thanks for subscribing!'); return false;"><input type="email"
+                        placeholder="Enter your email" required>
+                    <button type="submit" id="subscribeButton">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="news.html">News</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
