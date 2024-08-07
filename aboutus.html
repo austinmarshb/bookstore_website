@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Testimonial and Contact Page</title>
+    <style>
+        body {
+            font-family: Calibri, serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style-type: none;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        h1 {
+            font-size: 4em;
+            text-align: center;
+        }
+
+        header,
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .headertitle {
+            font-size: 3rem;
+            font-weight: bold;
+            background-color: #5C2E5C;
+            color: white;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            font-size: 1.75em;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu-icon img {
+            display: none;
+        }
+
+        .testimonial {
+            background-color: #5C2E5C;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .testimonial p {
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .contact-form {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hours {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .hours img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .hours-info {
+            margin-top: 20px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        .newsletter {
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #3E5641;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 300px;
+            max-width: 80%;
+            margin-bottom: 10px;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #742C36;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .menu-icon img {
+                display: block;
+            }
+
+            /* .nav-links {
+                display: none;
+            } */
+            nav a {
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .contact-form input,
+            .contact-form textarea {
+                max-width: 90%;
+            }
+
+            .hours img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="headertitle">Book Haven Books</div>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="news.html">News</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <h1>About Us</h1>
+    <section class="testimonial">
+        <div class="container">
+            <p>We are this areas oldest bookstore specializing in early prints and editions of fiction and non-fiction
+                books.<br><br>But that is not all we sell!<br><br>We have everything else you might be interested in
+                reading, including:<br><br>
+            <ul>
+                <li>Todays most popular book titles</li>
+                <li>Magazines</li>
+                <li>Comics</li>
+                <li>Reading Accessories</li>
+            </ul>
+            </p><br><br><br><br>
+            <h2>Customer Testimonials</h2><br>
+            <p><strong>John Doe</strong></p>
+            <p><em>Lorem ipsum dolor sit amet, mei ad ancillae constituam, eirmod appetere est in. Putant ornatus eum
+                    ex, solum aeterno ne nam, has ut tota eius imperdiet. Laudem melius ex cum. Alienum verterem
+                    urbanitas per in, eu rebum detraxit delicatissimi mel, case persecuti persequeris ad nam. Mei semper
+                    utroque gubergren te, salutatus iracundia eu est.</em></p>
+        </div>
+        <div class="container">
+            <p><strong>Jane Doe</strong></p>
+            <p><em>Lorem ipsum dolor sit amet, mei ad ancillae constituam, eirmod appetere est in. Putant ornatus eum
+                    ex, solum aeterno ne nam, has ut tota eius imperdiet. Laudem melius ex cum. Alienum verterem
+                    urbanitas per in, eu rebum detraxit delicatissimi mel, case persecuti persequeris ad nam. Mei semper
+                    utroque gubergren te, salutatus iracundia eu est.</em></p>
+        </div>
+        <div class="container">
+            <p><strong>Local Famous Person</strong></p>
+            <p><em>Lorem ipsum dolor sit amet, mei ad ancillae constituam, eirmod appetere est in. Putant ornatus eum
+                    ex, solum aeterno ne nam, has ut tota eius imperdiet. Laudem melius ex cum. Alienum verterem
+                    urbanitas per in, eu rebum detraxit delicatissimi mel, case persecuti persequeris ad nam. Mei semper
+                    utroque gubergren te, salutatus iracundia eu est.</em></p>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <h2>Contact and Special Orders</h2>
+        <div class="container">
+            <form id="contactForm" onsubmit="alert('Thank you for your message!'); return false;">
+                <input id="firstname" type="text" name="name" placeholder="Name" required>
+                <input id="lastname" type="text" name="lastname" placeholder="Last Name" required>
+                <input id="email" type="email" name="email" placeholder="Email" required>
+                <textarea id="message" name="message" placeholder="Message" required></textarea>
+                <button type="submit" id="thxSubmit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="hours">
+        <div class="container">
+            <img src="clock-icon.webp" alt="Clock Icon"><br>
+            <div class="hours-info">
+                <h3>Hours of Operation</h3>
+                <p>10AM - 6PM Monday - Friday</p>
+                <p>12PM - 8PM Weekends</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="newsletter">
+                <h3>Sign up for our Newsletter</h3>
+                <form onsubmit="alert('Thanks for subscribing!'); return false;"><input type="email"
+                        placeholder="Enter your email" required>
+                    <button type="submit" id="subscribeButton">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="news.html">News</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
