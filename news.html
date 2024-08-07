@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Article and Newsletter Page</title>
+    <style>
+        body {
+            font-family: Calibri, serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 4em;
+            text-align: center;
+        }
+
+        header,
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .headertitle {
+            font-size: 3rem;
+            font-weight: bold;
+            background-color: #5C2E5C;
+            color: white;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            font-size: 1.75em;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu-icon img {
+            display: none;
+        }
+
+        .main-article {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .main-article .article-image {
+            background-color: #3F5461;
+            color: #fff;
+            padding: 100px 20px;
+            margin-bottom: 20px;
+        }
+
+        .main-article .article-image h2 {
+            margin: 0;
+        }
+
+        .main-article .article-image p {
+            margin-top: 20px;
+        }
+
+        .secondary-articles {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+
+        .secondary-article {
+            width: 80%;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .secondary-article h3 {
+            margin-top: 0;
+        }
+
+        .secondary-article p {
+            margin: 10px 0;
+        }
+
+        .newsletter {
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #3E5641;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 300px;
+            max-width: 80%;
+            margin-bottom: 10px;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #742C36;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .menu-icon img {
+                display: block;
+            }
+
+            /* .nav-links {
+                display: none;
+            } */
+            nav a {
+                margin: 10px 0;
+            }
+
+            .secondary-article {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-article .article-image {
+                padding: 50px 10px;
+            }
+
+            .secondary-article {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="headertitle">Book Haven Books</div>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="news.html">News</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <h1>News</h1>
+    <section class="main-article">
+        <div class="container">
+            <div class="article-image">
+                <h2>Check out the recent happenings at our brick and mortar location.</h2>
+                <p>Read more below</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="secondary-articles">
+        <div class="container">
+            <div class="secondary-article">
+                <h3>Authors coming to speak this month</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore...</p>
+                <p>Read More</p>
+            </div>
+            <div class="secondary-article">
+                <h3>All new shipment of first edition 1950s fiction titles.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore...</p>
+                <p>Read More</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="newsletter">
+                <h3>Sign up for our Newsletter</h3>
+                <form onsubmit="alert('Thanks for subscribing!'); return false;"><input type="email"
+                        placeholder="Enter your email" required>
+                    <button type="submit" id="subscribeButton">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="news.html">News</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
